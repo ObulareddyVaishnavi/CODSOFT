@@ -11,8 +11,11 @@ def play():
         player=input("Rock Paper or Scissors?").capitalize()
         computer=random.choice(arr).capitalize()
         print(f"You Selected:{player} vs Computer Selected:{computer}")
+        
         if player==computer:
             print('Tie Game')
+
+        
         elif player=="Rock":
             if(computer=='Paper'):
                 print("You lose")
@@ -20,6 +23,8 @@ def play():
             else:
                 print("You win")
                 playerscore+=1
+
+        
         elif player=="Paper":
             if(computer=='Scissors'):
                 print("You lose")
@@ -27,6 +32,8 @@ def play():
             else:
                 print("You win")
                 playerscore+=1
+
+        
         elif player=="Scissors":
             if(computer=='Rock'):
                 print("You lose")
@@ -34,6 +41,7 @@ def play():
             else:
                 print("You win")
                 playerscore+=1
+       #Displaying the scores
         print(f"Your Score({playerscore}) vs Computer({computerScore})")
         inPlay=input("Play again?")
         if inPlay=='exit':
